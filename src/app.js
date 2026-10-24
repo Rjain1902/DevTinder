@@ -5,6 +5,21 @@ const app=express()
 app.use("/test",(req,res)=>{
     res.send("test server")
 })
+app.get("/user",(req,res)=>{
+    res.send("GET COMMAND")
+})
+app.post("/user",(req,res)=>{
+    res.send("Data Saved successfully")
+
+})
+app.delete("/user",(req,res)=>{
+    res.send("Data deleted")
+
+})
+app.patch("/user",(req,res)=>{
+    res.send("Data updated")
+
+})
 app.use("/hello",(req,res)=>{
     res.send("Hello")
 })
